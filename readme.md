@@ -4,14 +4,22 @@ This is the backend system for handling customer support summarization using Ope
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 1️⃣ Install Dependencies
+### Install Dependencies
 
 Navigate to the project folder and run:
 
 ```bash
 npm install
+```
+
+### Set Up Environment Variables
+
+Create a .env file in the root directory of the project and add the following:
+
+```bash
+OPEN_AI_API_KEY=openai_api_key
 ```
 
 ### Start the Server
@@ -27,10 +35,11 @@ The development server will start on the port 3000.
 #### POST /api/v1/support/summarize
 
 This endpoint receives a customer message and returns:
-• A simple summary
-• Classification (e.g., refund, delay, account access, etc.)
-• Sentiment
-• Urgency level
+
+- A simple summary
+- Classification (e.g., refund, delay, account access, etc.)
+- Sentiment
+- Urgency level
 
 #### input
 
