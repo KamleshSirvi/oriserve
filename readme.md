@@ -59,3 +59,17 @@ This endpoint receives a customer message and returns:
     "sentiment": "Positive"
 }
 ```
+
+### Important notes
+
+- The prompt used to guide the AI response is stored in prompt/supportPrompt.txt.
+- This file is read only once at server startup to improve performance.
+- Store the loaded prompt in a variable and reuse it rather than re-reading the file on every API call.
+- Use a low temperature (e.g., 0.2) for predictable, reliable AI responses.
+
+### Technologies Used
+
+- Node.js
+- Express.js
+- OpenAI API (gpt-3.5-turbo)
+- Axios
